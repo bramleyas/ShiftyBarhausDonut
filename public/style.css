@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#replit-badge,
+#replit-badge:before,
+#replit-badge:after {
+	background: none;
+	border: none;
+}
+
+html, body {
+	font-size: 70%;
+}
+
+body {
+	height: fit-content;
+	margin: 40px auto 0;
+	max-width: 700px;
+	padding: 20px;
+}
+
+@media (max-width: 1300px) {
+	body {
+		margin-top: -50px;
+	}
+}
+
+.container {
+	margin: initial;
+	max-width: initial;
+	padding: initial;
+}
+
+p a,
+p a:before,
+p a:after {
+	background: none;
+	border: none;
+	padding: 0;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: var(--primary-2);
+	transition: text-decoration-color 0.1s ease;
+}
+
+p a:hover,
+p a:hover:before,
+p a:hover:after {
+	background: none;
+	border: none;
+	text-decoration-color: var(--accent-2);
+}
+
+blockquote p {
+	margin: 2.5px 0;
+}
+
+footer a:before {
+	transform-origin: 0 11px;
+}
+
+:target {
+  padding-left: 5px;
+  background-color: var(--background-1);
+}

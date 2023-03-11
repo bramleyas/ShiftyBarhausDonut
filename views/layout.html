@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{ TITLE }}</title>
+
+		<!-- Furret.css Stylesheets + JS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com/" />
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+		<link
+		  href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		  rel="stylesheet"
+		/>
+	  <link
+			href="//css.furret.codes/furretcss/v2/full/dark.min.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+	  <link
+			href="//css.furret.codes/highlightjs/furret.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+	  
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="content">
+			{{{body}}}
+		</div>
+		<footer>
+			<p>Note by <a href="https://replit.com/{{ OWNER }}">@{{ OWNER }}</a></p>
+		</footer>
+
+		<script>
+			const socket = new WebSocket(`wss://${location.hostname}`);
+			const content = document.getElementById('content');
+			
+			socket.addEventListener('message', (event) => {
+				content.innerHTML = event.data;
+			});
+		</script>
+	</body>
+</html>
